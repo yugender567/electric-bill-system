@@ -1,0 +1,9 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("https://www.hdwallback.net/wp-content/uploads/2018/01/Light-Background-Wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #2f4f4b;
+  padding: 20;
+}
