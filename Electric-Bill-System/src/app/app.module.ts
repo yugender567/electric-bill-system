@@ -7,14 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { ConsumerDashboardComponent } from './consumer-dashboard/consumer-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    LoginsuccessComponent,
+    ConsumerDashboardComponent,
   ],
   imports: [
     BrowserModule,

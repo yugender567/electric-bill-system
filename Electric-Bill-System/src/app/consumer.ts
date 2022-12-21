@@ -1,12 +1,13 @@
-export class User {
-  firstName: string | undefined;
+export class Consumer {
+  firstName!: string;
   emailId!: string;
   city!: string;
-  area!: string;
+  area: string | undefined;
   plan!: string;
   password!: string;
   constructor() {}
-  // constructor(
+
+  // setvalues(
   //   firstName: string,
   //   emailId: string,
   //   city: string,
