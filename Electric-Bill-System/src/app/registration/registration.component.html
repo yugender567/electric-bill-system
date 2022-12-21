@@ -11,20 +11,20 @@
     <small class="text-danger">{{ msg }}</small>
     <!-- <small [class.text-danger]="msg.status == 500">{{ msg.message }}</small> -->
     <div class="form-group">
-      <label for="firstName">Consumer Name :</label>
+      <label for="consumerName">Consumer Name :</label>
       <input
         type="text"
         class="form-control"
         placeholder="Enter a consumer name"
-        name="firstName"
-        [(ngModel)]="consumer.firstName"
-        #firstName="ngModel"
+        name="consumerName"
+        [(ngModel)]="consumer.consumerName"
+        #consumerName="ngModel"
         required
-        [class.is-invalid]="firstName.invalid && firstName.touched"
+        [class.is-invalid]="consumerName.invalid && consumerName.touched"
       />
       <small
         class="text-danger"
-        [class.d-none]="firstName.valid || firstName.untouched"
+        [class.d-none]="consumerName.valid || consumerName.untouched"
         >Consumer Name is required field</small
       >
     </div>
@@ -36,7 +36,7 @@
         class="form-control"
         placeholder="Enter email"
         name="email"
-        [(ngModel)]="consumer.emailId"
+        [(ngModel)]="consumer.email"
         required
         pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
         #email="ngModel"
@@ -94,10 +94,10 @@
           class="form-check-input"
           type="radio"
           name="inlineRadioOptions"
-          id="comercial"
+          id="domestic"
           value="1"
           checked
-          [(ngModel)]="consumer.plan"
+          [(ngModel)]="consumer.planType.rateId"
         />
         <label class="form-check-label" for="domesticplan">Domestic</label>
       </div>
@@ -107,9 +107,9 @@
           class="form-check-input"
           type="radio"
           name="inlineRadioOptions"
-          id="domestic"
+          id="comercial"
           value="2"
-          [(ngModel)]="consumer.plan"
+          [(ngModel)]="consumer.planType.rateId"
         />
         <label class="form-check-label" for="comercial">Commercial</label>
       </div>

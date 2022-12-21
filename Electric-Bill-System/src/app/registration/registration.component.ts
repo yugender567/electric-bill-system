@@ -16,7 +16,11 @@ export class RegistrationComponent implements OnInit {
   constructor(private _service: RegistrationService, private _router: Router) {}
 
   ngOnInit() {}
+
   registerUser() {
+    this.consumer.planType.planName = '';
+    this.consumer.planType.price = 0;
+    console.log(this.consumer);
     this._service.registerUserFromRemote(this.consumer).subscribe(
       (data) => {
         console.log('response recieved');
@@ -26,6 +30,7 @@ export class RegistrationComponent implements OnInit {
       },
       (error) => {
         console.log('exception occured');
+        console.log(error);
         this.msg = error.error;
       }
     );

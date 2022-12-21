@@ -1,9 +1,11 @@
+import { Rate } from './rate';
+
 export class Consumer {
-  firstName!: string;
-  emailId!: string;
+  consumerName!: string;
+  email!: string;
   city!: string;
   area: string | undefined;
-  plan!: string;
+  planType: Rate = new Rate();
   password!: string;
   constructor() {}
 
